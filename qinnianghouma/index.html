@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="亲娘后妈 - 家庭伦理影视与小说资源库，提供热门家庭剧推荐、电视剧观看指南及经典影视作品解读。">
+    <meta name="keywords" content="亲娘后妈,家庭伦理剧,电视剧推荐,家庭情感剧,影视解说">
+    <title>亲娘后妈-热门家庭伦理剧推荐与影视观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b5cf6;
+            --primary-hover: #7c3aed;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdf4ff 0%, #fff 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        /* Filter Tags */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 6px 16px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tag:hover, .tag.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Grid Layout */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .media-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .media-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-content {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 8px 0;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            background-color: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+            border: 1px solid var(--border-color);
+        }
+
+        .intro-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .intro-content p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .intro-list {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        .intro-list li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .intro-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 16px 0;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>亲娘后妈</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>家庭伦理剧推荐</h1>
+            <p>深度解析家庭关系中的复杂情感，精选热门《亲娘后妈》题材影视剧，为您带来真实的家庭情感体验。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="intro-section">
+            <div class="intro-content">
+                <h2>什么是“亲娘后妈”题材？</h2>
+                <p>“亲娘后妈”题材的影视作品主要聚焦于继母与继子女、以及原生家庭与重组家庭之间的复杂关系。这类题材往往通过戏剧化的冲突，探讨亲情、信任、偏见与和解等深刻主题。</p>
+                <p>这类剧集通常具有以下特点：冲突激烈、情感细腻、贴近生活。观众在观看时，既能看到人性的光辉，也能反思现实生活中的家庭相处之道。</p>
+                <ul class="intro-list">
+                    <li><strong>情感共鸣：</strong> 真实还原家庭生活中的酸甜苦辣。</li>
+                    <li><strong>人性探讨：</strong> 深入挖掘角色在困境中的选择与成长。</li>
+                    <li><strong>社会意义：</strong> 反映现代家庭结构变化带来的挑战。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">热门推荐</h2>
+            <div class="filter-bar">
+                <span class="tag active">全部</span>
+                <span class="tag">电视剧</span>
+                <span class="tag">电影</span>
+                <span class="tag">高分榜单</span>
+                <span class="tag">近期更新</span>
+            </div>
+
+            <div class="media-grid">
+                <!-- Card 1 -->
+                <article class="media-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/family1/400/300" alt="家庭剧封面">
+                        <span class="card-badge">高分</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">岁月长情：继母的担当</h3>
+                        <div class="card-meta">
+                            <span>2023</span>
+                            <span>剧情 / 家庭</span>
+                        </div>
+                        <p class="card-desc">讲述了单亲母亲与继女之间从陌生隔阂到相互扶持，共同面对生活风雨的感人故事。</p>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">观看</a>
+                            <a href="#" class="btn btn-outline">详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="media-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/family2/400/300" alt="家庭剧封面">
+                        <span class="card-badge">热播</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">后妈难当：爱的考验</h3>
+                        <div class="card-meta">
+                            <span>2022</span>
+                            <span>都市 / 情感</span>
+                        </div>
+                        <p class="card-desc">一位坚强独立的女性重组家庭，在复杂的家庭关系中努力寻找属于自己的位置。</p>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">观看</a>
+                            <a href="#" class="btn btn-outline">详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="media-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/family3/400/300" alt="家庭剧封面">
+                        <span class="card-badge">经典</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">血脉相连：寻找真相</h3>
+                        <div class="card-meta">
+                            <span>2021</span>
+                            <span>悬疑 / 家庭</span>
+                        </div>
+                        <p class="card-desc">围绕家族秘密展开，亲生母亲与继母在保护孩子过程中的信任危机与情感升华。</p>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">观看</a>
+                            <a href="#" class="btn btn-outline">详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="media-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/family4/400/300" alt="家庭剧封面">
+                        <span class="card-badge">新片</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">温暖的家：重组之后</h3>
+                        <div class="card-meta">
+                            <span>2024</span>
+                            <span>治愈 / 剧情</span>
+                        </div>
+                        <p class="card-desc">一部轻松温馨的轻喜剧，展示了重组家庭如何在欢笑与泪水中建立深厚的羁绊。</p>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">观看</a>
+                            <a href="#" class="btn btn-outline">详情</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">观看指南与注意事项</h2>
+            <div class="media-grid" style="grid-template-columns: 1fr;">
+                <article class="media-card" style="flex-direction: row; align-items: center;">
+                    <div class="card-image" style="width: 200px; height: 140px; flex-shrink: 0;">
+                        <img src="https://picsum.photos/seed/guide1/200/140" alt="观看指南">
+                    </div>
+                    <div class="card-content" style="padding: 0 24px;">
+                        <h3 class="card-title">如何选择合适的家庭剧？</h3>
+                        <p class="card-desc" style="-webkit-line-clamp: 3;">
+                            选择家庭伦理剧时，建议根据个人情感承受能力进行筛选。对于想要寻求情感治愈的观众，推荐选择剧情轻松、结局圆满的作品；对于喜欢深度挖掘人性的观众，可以选择冲突强烈、结局开放的作品。
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col" style="flex: 2; min-width: 300px;">
+                <h4>关于 亲娘后妈</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    本站致力于为用户提供最优质的影视剧资源推荐与深度解析。我们关注家庭情感话题，希望能为观众提供有价值的观看参考。
+                </p>
+            </div>
+            <div class="footer-col" style="flex: 1; min-width: 150px;">
+                <h4>栏目导航</h4>
+                <ul>
+                    <li><a href="#">电视剧大全</a></li>
+                    <li><a href="#">高分榜单</a></li>
+                    <li><a href="#">影评解析</a></li>
+                    <li><a href="#">用户社区</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="flex: 1; min-width: 150px;">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 亲娘后妈资源站. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
