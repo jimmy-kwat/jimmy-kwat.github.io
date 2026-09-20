@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="妹妹人体艺术展示平台，提供人体美学、健康科普与绘画参考相关内容，旨在推广科学与健康的生活方式。">
+    <meta name="keywords" content="妹妹人体,人体艺术,艺术解剖,健康生活,绘画参考">
+    <title>妹妹人体-健康艺术与人体美学展示平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 20px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* Content Grid */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 350px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+        }
+
+        .category-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Info/Text Section */
+        .info-section {
+            margin-top: 40px;
+        }
+
+        .info-block {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+
+        .info-block h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .info-block p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Art</span>Body
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">艺术赏析</a></li>
+                    <li><a href="#">健康科普</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">加入会员</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索人体艺术之美</h1>
+                <p>我们致力于提供高质量的人体艺术图片与绘画参考，探索形态与结构的科学之美，同时传播健康的生活理念。</p>
+                <div class="hero-tags">
+                    <span class="tag">艺术解剖</span>
+                    <span class="tag">绘画参考</span>
+                    <span class="tag">健康生活</span>
+                    <span class="tag">美学研究</span>
+                </div>
+                <a href="#gallery" class="cta-button" style="padding: 12px 30px; font-size: 1rem;">开始浏览</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Gallery Section -->
+                <section id="gallery">
+                    <h2 class="section-title">精选图集</h2>
+                    <div class="gallery-grid">
+                        <!-- Item 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/art1/400/500" alt="人体艺术参考图" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">动态姿态解析</h3>
+                                <div class="card-meta">
+                                    <span>绘画参考</span>
+                                    <span>2.3k 浏览</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Item 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/art2/400/500" alt="艺术构图展示" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">光影构图研究</h3>
+                                <div class="card-meta">
+                                    <span>摄影技巧</span>
+                                    <span>1.8k 浏览</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Item 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/art3/400/500" alt="素描线条练习" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">素描线条练习</h3>
+                                <div class="card-meta">
+                                    <span>基础训练</span>
+                                    <span>3.1k 浏览</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Item 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/art4/400/500" alt="色彩搭配指南" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">色彩搭配指南</h3>
+                                <div class="card-meta">
+                                    <span>色彩理论</span>
+                                    <span>5.6k 浏览</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Informational Section -->
+                <section class="info-section">
+                    <h2 class="section-title">相关科普与知识</h2>
+                    
+                    <div class="info-block">
+                        <h3>人体结构的艺术价值</h3>
+                        <p>人体是自然界最复杂的有机体之一，其骨骼系统、肌肉群与皮肤纹理构成了独特的艺术语言。在绘画和雕塑中，对人体结构的准确理解是创作写实作品的基础。通过研究人体的比例、重心与动态，艺术家能够捕捉到生命的律动感。</p>
+                        <p>本站提供大量经过筛选的参考资料，旨在帮助艺术爱好者提升观察力与表现力。所有内容均经过严格审核，确保符合法律法规与道德规范。</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>健康生活与身体管理</h3>
+                        <p>保持健康的身体状态是欣赏和表现人体美的前提。合理的饮食、规律的作息以及适当的运动，能够改善体态、增强体质。对于创作者而言，了解解剖学知识不仅有助于艺术创作，也是维护自身健康的科学依据。</p>
+                        <p>我们鼓励用户关注身体的健康与潜能，通过科学的方式展现身体的自然之美。</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>热门分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#">素描写生 <span>120</span></a></li>
+                        <li><a href="#">光影摄影 <span>85</span></a></li>
+                        <li><a href="#">雕塑作品 <span>64</span></a></li>
+                        <li><a href="#">解剖学图解 <span>42</span></a></li>
+                        <li><a href="#">色彩研究 <span>31</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>最新更新</h3>
+                    <ul class="category-list">
+                        <li><a href="#">如何表现肌肉张力</a></li>
+                        <li><a href="#">古典油画中的女性形象</a></li>
+                        <li><a href="#">摄影棚布光技巧分享</a></li>
+                        <li><a href="#">人体比例的黄金分割</a></li>
+                        <li><a href="#">从生活观察中获取灵感</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem;">
+                    致力于分享人体艺术知识、绘画技巧与健康生活理念，为艺术爱好者提供专业的参考资源。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">美术教育网</a></li>
+                    <li><a href="#">健康生活指南</a></li>
+                    <li><a href="#">艺术交流论坛</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 ArtBody 人体艺术展示平台. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
