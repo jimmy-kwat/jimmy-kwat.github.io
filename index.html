@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="你好乔安演员表查询页面，提供电视剧《你好，乔安》主要演员、配角阵容及角色介绍，包括倪妮、陈晓、刘畅等主演详细信息。">
+    <meta name="keywords" content="你好乔安演员表,你好乔安演员,倪妮,陈晓,你好乔安角色介绍">
+    <title>你好乔安演员表-主要演员阵容与角色介绍</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .main-nav a {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: color 0.2s;
+        }
+
+        .main-nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 30px var(--spacing-unit);
+        }
+
+        /* Cast Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .cast-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cast-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .actor-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--primary-color);
+        }
+
+        .actor-role {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .actor-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            flex: 1;
+        }
+
+        .actor-meta {
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .info-block h3 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .info-list strong {
+            color: var(--text-main);
+        }
+
+        .info-list span {
+            color: var(--text-light);
+        }
+
+        .character-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .character-item {
+            background: #f4f6f8;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .char-name {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .char-actor {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #bdc3c7;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .main-nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .character-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🎬</span> 演员表大全
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">综艺</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>你好乔安演员表</h1>
+        <p>聚焦都市职场励志剧《你好，乔安》，为您详细介绍主要演员阵容、角色设定及人物关系。</p>
+    </section>
+
+    <main class="container">
+        <!-- 主演阵容 -->
+        <section class="cast-section">
+            <div class="section-title">
+                <span>主要演员阵容</span>
+                <span style="font-size: 0.9rem; font-weight: normal; color: #666;">共 12 位核心主演</span>
+            </div>
+            
+            <div class="cast-grid">
+                <!-- 角色 1 -->
+                <article class="cast-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/joanneny/400/500" alt="倪妮饰演乔安">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="actor-name">倪妮</h3>
+                        <p class="actor-role">饰 乔安</p>
+                        <p class="actor-desc">出生于南京，中国内地影视女演员。毕业于中国传媒大学南广学院。本剧中饰演外表高冷、内心坚韧的职场女性乔安。</p>
+                        <div class="actor-meta">代表作品：《金陵十三钗》、《天盛长歌》</div>
+                    </div>
+                </article>
+
+                <!-- 角色 2 -->
+                <article class="cast-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/chenxiao/400/500" alt="陈晓饰演齐晨">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="actor-name">陈晓</h3>
+                        <p class="actor-role">饰 齐晨</p>
+                        <p class="actor-desc">出生于安徽合肥，中国内地影视男演员。毕业于中央戏剧学院。本剧中饰演乔安的大学同学兼挚友，性格阳光开朗。</p>
+                        <div class="actor-meta">代表作品：《那年花开月正圆》、《神雕侠侣》</div>
+                    </div>
+                </article>
+
+                <!-- 角色 3 -->
+                <article class="cast-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/liuchang/400/500" alt="刘畅饰演陆远扬">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="actor-name">刘畅</h3>
+                        <p class="actor-role">饰 陆远扬</p>
+                        <p class="actor-desc">出生于北京，中国内地影视男演员。本剧中饰演乔安的顶头上司，典型的精英人士，对工作一丝不苟。</p>
+                        <div class="actor-meta">代表作品：《最好的我们》、《致我们单纯的小美好》</div>
+                    </div>
+                </article>
+
+                <!-- 角色 4 -->
+                <article class="cast-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/xiaoxin/400/500" alt="马吟吟饰演陈乔">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="actor-name">马吟吟</h3>
+                        <p class="actor-role">饰 陈乔</p>
+                        <p class="actor-desc">出生于上海，中国内地女演员、歌手。本剧中饰演乔安的闺蜜，温柔知性，是乔安的情感后盾。</p>
+                        <div class="actor-meta">代表作品：《微时代》、《奇妙的朋友》</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 剧情与人物介绍 -->
+        <section class="info-section">
+            <div class="section-title">
+                <span>剧情与人物关系</span>
+            </div>
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>剧情简介</h3>
+                    <p style="color: #555; font-size: 0.95rem; margin-bottom: 15px;">
+                        《你好，乔安》是一部都市职场励志剧，讲述了两个性格截然不同的女性在职场中互相扶持、共同成长的故事。乔安（倪妮 饰）原本是生活优渥的富家女，因家庭变故跌落神坛，在职场中经历了种种挫折与挑战，最终凭借自己的努力重新站稳脚跟。
+                    </p>
+                    <h3>播出信息</h3>
+                    <ul class="info-list">
+                        <li><strong>导演：</strong> 王晓明</li>
+                        <li><strong>编剧：</strong> 阿耐</li>
+                        <li><strong>原著：</strong> 阿耐《欢乐颂》系列</li>
+                        <li><strong>首播时间：</strong> 2017年</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>主要角色关系</h3>
+                    <div class="character-list">
+                        <div class="character-item">
+                            <span class="char-name">乔安</span>
+                            <span class="char-actor">倪妮 饰</span>
+                        </div>
+                        <div class="character-item">
+                            <span class="char-name">齐晨</span>
+                            <span class="char-actor">陈晓 饰</span>
+                        </div>
+                        <div class="character-item">
+                            <span class="char-name">陈乔</span>
+                            <span class="char-actor">马吟吟 饰</span>
+                        </div>
+                        <div class="character-item">
+                            <span class="char-name">赵茉茉</span>
+                            <span class="char-actor">王梓薇 饰</span>
+                        </div>
+                        <div class="character-item">
+                            <span class="char-name">王恺</span>
+                            <span class="char-actor">郑恺 饰</span>
+                        </div>
+                        <div class="character-item">
+                            <span class="char-name">江达琳</span>
+                            <span class="char-actor">王晓晨 饰</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="info-section">
+            <div class="section-title">
+                <span>常见问题 (FAQ)</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <details style="background: #fff; padding: 15px; border-radius: 4px; border: 1px solid #eee;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">《你好乔安》的原著小说是什么？</summary>
+                    <p style="margin-top: 10px; color: #666; font-size: 0.9rem;">该剧改编自作家阿耐的小说《欢乐颂》系列，但在人物设定和故事走向上进行了独立的改编，主要聚焦于乔安这个角色的成长史。</p>
+                </details>
+                <details style="background: #fff; padding: 15px; border-radius: 4px; border: 1px solid #eee;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">除了倪妮和陈晓，还有哪些熟面孔？</summary>
+                    <p style="margin-top: 10px; color: #666; font-size: 0.9rem;">剧中还有郑恺饰演的王恺、王晓晨饰演的江达琳等演员参演，他们的加入为剧集增添了更多看点。</p>
+                </details>
+                <details style="background: #fff; padding: 15px; border-radius: 4px; border: 1px solid #eee;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">在哪里可以观看这部剧？</summary>
+                    <p style="margin-top: 10px; color: #666; font-size: 0.9rem;">该剧于2017年在东方卫视、浙江卫视首播，并在腾讯视频、爱奇艺等网络平台同步播出。具体播放渠道请以各大平台最新信息为准。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系合作</a>
+                <a href="#">免责声明</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p class="copyright">本页面仅用于展示《你好乔安》演员表及相关信息，非官方网站。所有版权归原制作方及出品方所有。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
