@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="你好李焕英百度云资源分享页面。提供高清电影下载、在线观看指南及资源获取注意事项，帮助用户安全、合规地观看经典喜剧电影。">
+    <meta name="keywords" content="你好李焕英百度云,你好李焕英电影下载,你好李焕英在线观看,贾玲你好李焕英,国产喜剧电影">
+    <title>你好李焕英百度云-经典国产喜剧电影资源与观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --primary-hover: #c0392b;
+            --secondary-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-color: #e1e4e8;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            font-size: 40px;
+            margin-bottom: var(--spacing-md);
+            display: block;
+        }
+
+        .info-card h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--secondary-color);
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Movie Details */
+        .movie-details {
+            background: var(--card-bg);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .details-wrapper {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .poster-wrapper {
+            position: sticky;
+            top: 80px;
+        }
+
+        .poster {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #999;
+        }
+
+        .details-content h2 {
+            font-size: 28px;
+            margin-bottom: var(--spacing-md);
+            color: var(--secondary-color);
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 12px;
+            color: var(--text-sub);
+            text-transform: uppercase;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .synopsis {
+            color: var(--text-sub);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-sm);
+            border-left: 4px solid var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Resource Cards */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .resource-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quality-tag {
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: var(--spacing-md);
+        }
+
+        .resource-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .resource-meta {
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        .download-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #fff3e0;
+        }
+
+        .guide-list {
+            counter-reset: guide-counter;
+        }
+
+        .guide-item {
+            background: white;
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            border-radius: 6px;
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+        }
+
+        .guide-item::before {
+            counter-increment: guide-counter;
+            content: counter(guide-counter);
+            background: var(--primary-color);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .guide-content h4 {
+            margin-bottom: 4px;
+            color: var(--secondary-color);
+        }
+
+        .guide-content p {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-col h4 {
+            margin-bottom: var(--spacing-md);
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .details-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .poster-wrapper {
+                position: static;
+                max-width: 200px;
+                margin: 0 auto var(--spacing-md);
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🎬</span> 影视资源库
+            </a>
+            <nav class="nav-links">
+                <a href="#details">影片详情</a>
+                <a href="#resources">资源下载</a>
+                <a href="#guide">观看指南</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#resources" class="cta-btn">立即获取</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>你好李焕英</h1>
+                <p>贾玲自导自演的温情喜剧，穿越母女情深的感人佳作</p>
+                <div class="hero-tags">
+                    <span class="tag">豆瓣 7.8分</span>
+                    <span class="tag">2019年上映</span>
+                    <span class="tag">中国内地</span>
+                    <span class="tag">喜剧 / 剧情</span>
+                </div>
+                <a href="#resources" class="cta-btn" style="background: white; color: var(--primary-color);">查看资源</a>
+            </div>
+        </section>
+
+        <!-- Info Cards -->
+        <section class="container">
+            <div class="info-grid">
+                <article class="info-card">
+                    <span class="info-icon">🎥</span>
+                    <h3>高清画质</h3>
+                    <p>提供1080P及4K超清版本，支持在线播放与本地下载，观影体验流畅。</p>
+                </article>
+                <article class="info-card">
+                    <span class="info-icon">💾</span>
+                    <h3>多种格式</h3>
+                    <p>支持MP4、MKV等常见格式，适配电脑、手机、平板等主流设备。</p>
+                </article>
+                <article class="info-card">
+                    <span class="info-icon">🛡️</span>
+                    <h3>安全下载</h3>
+                    <p>资源来源可靠，无病毒无广告，保障您的网络安全与隐私。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Movie Details -->
+        <section id="details" class="section movie-details">
+            <div class="container details-wrapper">
+                <div class="poster-wrapper">
+                    <div class="poster">
+                        🎞️
+                    </div>
+                </div>
+                <div class="details-content">
+                    <h2>影片简介</h2>
+                    <div class="meta-info">
+                        <div class="meta-item">
+                            <span class="meta-label">导演</span>
+                            <span class="meta-value">贾玲</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">主演</span>
+                            <span class="meta-value">贾玲 / 张小斐 / 沈腾</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">类型</span>
+                            <span class="meta-value">喜剧 / 剧情 / 奇幻</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">时长</span>
+                            <span class="meta-value">134 分钟</span>
+                        </div>
+                    </div>
+                    <div class="synopsis">
+                        <h3 style="margin-bottom: 10px; font-size: 18px;">剧情梗概</h3>
+                        2001年的夏天，贾晓玲（贾玲 饰）为了能让母亲李焕英（张小斐 饰）高兴，卷入了一场穿越时空的冒险。她意外穿越回了1981年的工厂，遇到了年轻时的母亲。为了让母亲开心，贾晓玲努力撮合母亲与厂长儿子沈光林，却没想到在相处中逐渐发现了母亲当年的不易与深情。这是一部关于母爱、遗憾与和解的感人故事。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section" style="background-color: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">资源列表</h2>
+                <p style="margin-bottom: 20px; color: var(--text-sub);">以下资源均经过整理，请根据您的网络环境选择合适的下载方式。</p>
+                
+                <div class="resource-grid">
+                    <!-- Resource 1 -->
+                    <div class="resource-card">
+                        <div class="card-header">
+                            <span class="quality-tag">1080P</span>
+                            <span style="font-size: 12px; color: #999;">MP4</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="resource-title">你好李焕英 1080P 国语高清无字幕</h3>
+                            <div class="resource-meta">大小: 2.4GB | 更新: 2023</div>
+                            <a href="#" class="download-btn">点击下载</a>
+                        </div>
+                    </div>
+
+                    <!-- Resource 2 -->
+                    <div class="resource-card">
+                        <div class="card-header">
+                            <span class="quality-tag">1080P</span>
+                            <span style="font-size: 12px; color: #999;">MKV</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="resource-title">你好李焕英 1080P 国语中英双字</h3>
+                            <div class="resource-meta">大小: 2.8GB | 更新: 2023</div>
+                            <a href="#" class="download-btn">点击下载</a>
+                        </div>
+                    </div>
+
+                    <!-- Resource 3 -->
+                    <div class="resource-card">
+                        <div class="card-header">
+                            <span class="quality-tag">4K</span>
+                            <span style="font-size: 12px; color: #999;">MKV</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="resource-title">你好李焕英 4K Remux 杜比视界</h3>
+                            <div class="resource-meta">大小: 25GB | 更新: 2024</div>
+                            <a href="#" class="download-btn">点击下载</a>
+                        </div>
+                    </div>
+
+                    <!-- Resource 4 -->
+                    <div class="resource-card">
+                        <div class="card-header">
+                            <span class="quality-tag">蓝光</span>
+                            <span style="font-size: 12px; color: #999;">ISO</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="resource-title">你好李焕英 蓝光原盘 ISO</h3>
+                            <div class="resource-meta">大小: 46GB | 更新: 2024</div>
+                            <a href="#" class="download-btn">点击下载</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section guide-section">
+            <div class="container">
+                <h2 class="section-title">观看指南</h2>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <div class="guide-content">
+                            <h4>如何使用百度网盘下载？</h4>
+                            <p>点击资源列表中的“点击下载”，将跳转至百度网盘分享页面。请先登录您的百度账号，点击页面中的“保存到网盘”按钮，随后即可在您的网盘中找到该文件。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-content">
+                            <h4>视频无法播放怎么办？</h4>
+                            <p>部分MKV格式文件可能需要安装支持HEVC解码的播放器（如PotPlayer、MPC-HC等）才能正常播放。建议使用系统自带的播放器或VLC Media Player尝试。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-content">
+                            <h4>关于资源分享的说明</h4>
+                            <p>本站提供的资源均为网友分享或网络整理，仅供个人学习交流使用，请勿用于商业用途。请在观看后24小时内删除，感谢您的支持。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+                <div style="max-width: 800px;">
+                    <details style="margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+                        <summary style="cursor: pointer; font-weight: 600; color: var(--secondary-color);">你好李焕英的结局是什么意思？</summary>
+                        <p style="margin-top: 8px; color: var(--text-sub);">电影结尾揭示贾晓玲穿越回去是为了让母亲开心，而母亲李焕英其实也早就知道晓玲是穿越回来的，她之所以配合演戏，是因为她也想给女儿一个惊喜，并表达对女儿的疼爱。母女俩在平行时空里完成了真正的和解。</p>
+                    </details>
+                    <details style="margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+                        <summary style="cursor: pointer; font-weight: 600; color: var(--secondary-color);">哪里可以在线观看？</summary>
+                        <p style="margin-top: 8px; color: var(--text-sub);">除了下载观看，您也可以在腾讯视频、爱奇艺、优酷等主流视频平台搜索“你好李焕英”进行正版在线观看。</p>
+                    </details>
+                    <details style="margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+                        <summary style="cursor: pointer; font-weight: 600; color: var(--secondary-color);">资源是否包含字幕？</summary>
+                        <p style="margin-top: 8px; color: var(--text-sub);">不同版本的资源字幕情况不同，部分版本包含中文字幕，部分包含中英双字幕，下载前请查看资源详情说明。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">热门电影</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">最新更新</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">下载教程</a></li>
+                        <li><a href="#">会员服务</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 影视资源库. All Rights Reserved. 本站内容仅供学习交流，请支持正版影视。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
